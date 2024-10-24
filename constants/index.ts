@@ -11,7 +11,8 @@ import company3 from '@/assets/icons/company-3.png';
 import company4 from '@/assets/icons/company-4.png';
 import company5 from '@/assets/icons/company-5.png';
 import company6 from '@/assets/icons/company-6.png';
-
+import dropdown from '@/assets/icons/dropdown.png';
+import search from '@/assets/icons/Search.png';
 export const images = {
     logo,
     man,
@@ -29,4 +30,6 @@ export const icons = {
     article,
     chart,
     graph,
+    dropdown,
+    search
 };
