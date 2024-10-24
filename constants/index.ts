@@ -13,6 +13,12 @@ import company5 from '@/assets/icons/company-5.png'
 import company6 from '@/assets/icons/company-6.png'
 import dropdown from '@/assets/icons/dropdown.png'
 import search from '@/assets/icons/search.png'
+import email from '@/assets/icons/email.png'
+import lock from '@/assets/icons/lock.png'
+import person from '@/assets/icons/person.png'
+import check from '@/assets/icons/check.png'
+import signIn from '@/assets/icons/signIn.png'
+import signUp from '@/assets/icons/signUp.png'
 
 export const images = {
   logo,
@@ -23,6 +29,8 @@ export const images = {
   company4,
   company5,
   company6,
+  signIn,
+  signUp,
 }
 
 export const icons = {
@@ -33,6 +41,10 @@ export const icons = {
   graph,
   dropdown,
   search,
+  email,
+  lock,
+  person,
+  check,
 }
 
 export const blogData = [

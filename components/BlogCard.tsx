@@ -1,7 +1,7 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { icons } from '@/constants'
-import { BlogProps } from '@/types'
+import { BlogProps } from '@/types/type'
 
 const BlogCard = ({ id, title, description, date, image }: BlogProps) => {
   return (
