@@ -1,32 +1,102 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
-
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { icons } from '@/constants'
+import { Tabs } from 'expo-router'
+import { Image, View } from 'react-native'
+import React from 'react'
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: 'purple',
+        tabBarInactiveTintColor: 'grayLight',
+        tabBarStyle: {
+          height: 60, // Adjust the height to match the pixel-perfect design
+          paddingBottom: 10, // Add some padding for a clean bottom spacing
+          paddingTop: 10,
+        },
         headerShown: false,
-      }}>
+      }}
+    >
       <Tabs.Screen
-        name="index"
+        name='index'
         options={{
-          title: 'Home',
-          
+          title: '',
+          tabBarIcon: ({ focused }) => (
+            <View className='items-center'>
+              <Image
+                source={icons.home}
+                className={`w-16 h-[52px] ${
+                  focused ? 'tint-purple-500' : 'tint-gray-400'
+                }`}
+                tintColor={focused ? 'purple' : 'grayLight'}
+              />
+              {focused && (
+                <View className='w-[52px] h-1 bg-purple  rounded-full' />
+              )}
+            </View>
+          ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name='article'
         options={{
-          title: 'Explore',
-        
+          title: '',
+          tabBarIcon: ({ focused }) => (
+            <View className='items-center'>
+              <Image
+                source={icons.article}
+                className={`w-16 h-[52px] ${
+                  focused ? 'tint-purple-500' : 'tint-gray-400'
+                }`}
+                tintColor={focused ? 'purple' : 'grayLight'}
+              />
+              {focused && (
+                <View className='w-[52px] h-1 bg-purple rounded-full' />
+              )}
+            </View>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name='graph'
+        options={{
+          title: '',
+          tabBarIcon: ({ focused }) => (
+            <View className='items-center'>
+              <Image
+                source={icons.graph}
+                className={`w-16 h-[52px] ${
+                  focused ? 'tint-purple-500' : 'tint-gray-400'
+                }`}
+                tintColor={focused ? 'purple' : 'grayLight'}
+              />
+              {focused && (
+                <View className='w-[52px] h-1 bg-purple  rounded-full' />
+              )}
+            </View>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name='chart'
+        options={{
+          title: '',
+          tabBarIcon: ({ focused }) => (
+            <View className='items-center'>
+              <Image
+                source={icons.chart}
+                className={`w-16 h-[52px] ${
+                  focused ? 'tint-purple-500' : 'tint-gray-400'
+                }`}
+                tintColor={focused ? 'purple' : 'grayLight'}
+              />
+              {focused && (
+                <View className='w-[52px] h-1 bg-purple  rounded-full' />
+              )}
+            </View>
+          ),
         }}
       />
     </Tabs>
-  );
+  )
 }

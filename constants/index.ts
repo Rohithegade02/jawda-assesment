@@ -12,7 +12,7 @@ import company4 from '@/assets/icons/company-4.png';
 import company5 from '@/assets/icons/company-5.png';
 import company6 from '@/assets/icons/company-6.png';
 import dropdown from '@/assets/icons/dropdown.png';
-import search from '@/assets/icons/Search.png';
+import search from '@/assets/icons/search.png';
 export const images = {
     logo,
     man,
